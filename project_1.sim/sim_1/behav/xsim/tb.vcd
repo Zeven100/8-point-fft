@@ -1,0 +1,1119 @@
+$date
+   Thu Mar 13 01:46:49 2025
+$end
+
+$version
+  2024.2.0
+  $dumpfile ("tb.vcd") 
+$end
+
+$timescale
+  1ps
+$end
+
+$scope module tb $end
+$var reg 1 ! clk $end
+$var reg 1 " start $end
+$var reg 1 # rst $end
+$var wire 16 $ real_data_o [15:0] $end
+$var wire 16 % img_data_o [15:0] $end
+$scope module top $end
+$var wire 1 & clk $end
+$var wire 1 ' start $end
+$var wire 1 ( rst $end
+$var wire 16 $ real_data_o [15:0] $end
+$var wire 16 % img_data_o [15:0] $end
+$var wire 1 ) tc1 $end
+$var wire 1 * tc2 $end
+$var wire 1 + tc3 $end
+$var wire 1 , en1 $end
+$var wire 1 - en2 $end
+$var wire 1 . en3 $end
+$var wire 16 / rom_out [15:0] $end
+$var reg 1 0 s2p_en $end
+$var wire 3 1 addr [2:0] $end
+$var wire 3 2 w1 [2:0] $end
+$var wire 3 3 w2 [2:0] $end
+$scope module pg1 $end
+$var wire 1 & clk $end
+$var wire 1 ' start $end
+$var wire 1 ) tc $end
+$var reg 1 4 en $end
+$upscope $end
+$scope module lc1 $end
+$var wire 1 & clk $end
+$var wire 1 , en $end
+$var wire 3 1 addr [2:0] $end
+$var reg 1 5 tc $end
+$var reg 3 6 count [2:0] $end
+$var reg 1 7 en_internal $end
+$upscope $end
+$scope module rom $end
+$var wire 1 & clk $end
+$var wire 1 , ren $end
+$var wire 3 1 addr [2:0] $end
+$var reg 16 8 data_o [15:0] $end
+$var reg 3 9 counter [2:0] $end
+$var reg 1 : en_internal $end
+$upscope $end
+$scope module s2p $end
+$var wire 1 & clk $end
+$var wire 1 ( rst $end
+$var wire 1 ; en $end
+$var wire 16 / data_in [15:0] $end
+$var reg 1 < en_internal $end
+$var reg 3 = counter [2:0] $end
+$scope begin Block108_7 $end
+$var reg 32 > i [31:0] $end
+$upscope $end
+$scope begin Block123_8 $end
+$var reg 32 ? i [31:0] $end
+$upscope $end
+$upscope $end
+$scope module pg2 $end
+$var wire 1 & clk $end
+$var wire 1 ) start $end
+$var wire 1 * tc $end
+$var reg 1 @ en $end
+$upscope $end
+$scope module lc2 $end
+$var wire 1 & clk $end
+$var wire 1 - en $end
+$var wire 3 2 addr [2:0] $end
+$var reg 1 A tc $end
+$var reg 3 B count [2:0] $end
+$var reg 1 C en_internal $end
+$upscope $end
+$scope module fftp $end
+$var wire 1 & clk $end
+$var wire 1 - start $end
+$var wire 1 ( rst $end
+$var reg 1 D en_internal $end
+$var reg 3 E counter [2:0] $end
+$scope module stage1_1 $end
+$var wire 1 & clk $end
+$var wire 16 F in1 [15:0] $end
+$var wire 16 G in2 [79:64] $end
+$var reg 16 H out1 [15:0] $end
+$var reg 16 I out2 [15:0] $end
+$upscope $end
+$scope module stage1_2 $end
+$var wire 1 & clk $end
+$var wire 16 J in1 [47:32] $end
+$var wire 16 K in2 [111:96] $end
+$var reg 16 L out1 [15:0] $end
+$var reg 16 M out2 [15:0] $end
+$upscope $end
+$scope module stage1_3 $end
+$var wire 1 & clk $end
+$var wire 16 N in1 [31:16] $end
+$var wire 16 O in2 [95:80] $end
+$var reg 16 P out1 [15:0] $end
+$var reg 16 Q out2 [15:0] $end
+$upscope $end
+$scope module stage1_4 $end
+$var wire 1 & clk $end
+$var wire 16 R in1 [63:48] $end
+$var wire 16 S in2 [127:112] $end
+$var reg 16 T out1 [15:0] $end
+$var reg 16 U out2 [15:0] $end
+$upscope $end
+$scope module stage2_1 $end
+$var wire 1 & clk $end
+$var wire 16 V in1 [15:0] $end
+$var wire 16 W in2 [47:32] $end
+$var reg 16 X out1 [15:0] $end
+$var reg 16 Y out2 [15:0] $end
+$upscope $end
+$scope module stage2_2 $end
+$var wire 1 & clk $end
+$var wire 16 Z in1 [31:16] $end
+$var wire 16 [ in2 [63:48] $end
+$var reg 16 \ out1 [15:0] $end
+$var reg 16 ] out2 [15:0] $end
+$var reg 16 ^ out3 [15:0] $end
+$var reg 16 _ out4 [15:0] $end
+$upscope $end
+$scope module stage2_3 $end
+$var wire 1 & clk $end
+$var wire 16 ` in1 [79:64] $end
+$var wire 16 a in2 [111:96] $end
+$var reg 16 b out1 [15:0] $end
+$var reg 16 c out2 [15:0] $end
+$upscope $end
+$scope module stage2_4 $end
+$var wire 1 & clk $end
+$var wire 16 d in1 [95:80] $end
+$var wire 16 e in2 [127:112] $end
+$var reg 16 f out1 [15:0] $end
+$var reg 16 g out2 [15:0] $end
+$var reg 16 h out3 [15:0] $end
+$var reg 16 i out4 [15:0] $end
+$upscope $end
+$scope module stage3_1 $end
+$var wire 1 & clk $end
+$var wire 16 j in [15:0] $end
+$var reg 16 k out [15:0] $end
+$upscope $end
+$scope module stage3_2 $end
+$var wire 1 & clk $end
+$var wire 16 l in [31:16] $end
+$var reg 16 m out [15:0] $end
+$upscope $end
+$scope module stage3_3 $end
+$var wire 1 & clk $end
+$var wire 16 n in [47:32] $end
+$var reg 16 o out [15:0] $end
+$upscope $end
+$scope module stage3_4 $end
+$var wire 1 & clk $end
+$var wire 16 p in [63:48] $end
+$var reg 16 q out [15:0] $end
+$upscope $end
+$scope module stage3_5 $end
+$var wire 1 & clk $end
+$var wire 16 r in [79:64] $end
+$var reg 16 s out [15:0] $end
+$upscope $end
+$scope module stage3_6 $end
+$var wire 1 & clk $end
+$var wire 16 t in [95:80] $end
+$var reg 16 u out [15:0] $end
+$upscope $end
+$scope module stage3_7 $end
+$var wire 1 & clk $end
+$var wire 16 v in [111:96] $end
+$var reg 16 w out [15:0] $end
+$upscope $end
+$scope module stage3_8 $end
+$var wire 1 & clk $end
+$var wire 16 x in [127:112] $end
+$var reg 16 y out [15:0] $end
+$upscope $end
+$scope module cmx1 $end
+$var wire 1 & clk $end
+$var wire 16 z in1 [143:128] $end
+$var wire 16 { in2 [159:144] $end
+$var reg 16 | out1 [15:0] $end
+$var reg 16 } out2 [15:0] $end
+$var wire 16 ~ sum [15:0] $end
+$var wire 16 !! diff [15:0] $end
+$var wire 32 "! mult_sum [31:0] $end
+$var wire 32 #! mult_diff [31:0] $end
+$upscope $end
+$scope module cmx2 $end
+$var wire 1 & clk $end
+$var wire 16 $! in1 [175:160] $end
+$var wire 16 %! in2 [191:176] $end
+$var reg 16 &! out1 [15:0] $end
+$var reg 16 '! out2 [15:0] $end
+$var wire 16 (! sum [15:0] $end
+$var wire 16 )! diff [15:0] $end
+$var wire 32 *! mult_sum [31:0] $end
+$var wire 32 +! mult_diff [31:0] $end
+$upscope $end
+$scope module stage4_real_1 $end
+$var wire 1 & clk $end
+$var wire 16 ,! in1 [15:0] $end
+$var wire 16 -! in2 [111:96] $end
+$var reg 16 .! out1 [15:0] $end
+$var reg 16 /! out2 [15:0] $end
+$upscope $end
+$scope module stage4_real_2 $end
+$var wire 1 & clk $end
+$var wire 16 0! in1 [47:32] $end
+$var wire 16 1! in2 [143:128] $end
+$var reg 16 2! out1 [15:0] $end
+$var reg 16 3! out2 [15:0] $end
+$upscope $end
+$scope module stage4_real_3 $end
+$var wire 1 & clk $end
+$var wire 16 4! in1 [31:16] $end
+$var wire 16 5! in2 [127:112] $end
+$var reg 16 6! out1 [15:0] $end
+$var reg 16 7! out2 [15:0] $end
+$var reg 16 8! out3 [15:0] $end
+$var reg 16 9! out4 [15:0] $end
+$upscope $end
+$scope module stage4_real_4 $end
+$var wire 1 & clk $end
+$var wire 16 :! in1 [79:64] $end
+$var wire 16 ;! in2 [175:160] $end
+$var reg 16 <! out1 [15:0] $end
+$var reg 16 =! out2 [15:0] $end
+$upscope $end
+$scope module stage4_imag_2 $end
+$var wire 1 & clk $end
+$var wire 16 >! in1 [63:48] $end
+$var wire 16 ?! in2 [159:144] $end
+$var reg 16 @! out1 [15:0] $end
+$var reg 16 A! out2 [15:0] $end
+$upscope $end
+$scope module stage4_imag_4 $end
+$var wire 1 & clk $end
+$var wire 16 B! in1 [95:80] $end
+$var wire 16 C! in2 [191:176] $end
+$var reg 16 D! out1 [15:0] $end
+$var reg 16 E! out2 [15:0] $end
+$upscope $end
+$scope begin Block253_37 $end
+$var reg 32 F! i [31:0] $end
+$upscope $end
+$scope begin Block259_38 $end
+$var reg 32 G! i [31:0] $end
+$upscope $end
+$upscope $end
+$scope module p2s1 $end
+$var wire 1 & clk $end
+$var wire 1 ( rst $end
+$var wire 1 . en $end
+$var reg 16 H! data_out [15:0] $end
+$var reg 3 I! count [2:0] $end
+$var reg 1 J! en_internal $end
+$upscope $end
+$scope module p2s2 $end
+$var wire 1 & clk $end
+$var wire 1 ( rst $end
+$var wire 1 . en $end
+$var reg 16 K! data_out [15:0] $end
+$var reg 3 L! count [2:0] $end
+$var reg 1 M! en_internal $end
+$upscope $end
+$scope module pg3 $end
+$var wire 1 & clk $end
+$var wire 1 * start $end
+$var wire 1 + tc $end
+$var reg 1 N! en $end
+$upscope $end
+$scope module lc3 $end
+$var wire 1 & clk $end
+$var wire 1 . en $end
+$var wire 3 3 addr [2:0] $end
+$var reg 1 O! tc $end
+$var reg 3 P! count [2:0] $end
+$var reg 1 Q! en_internal $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+
+#0
+$dumpvars
+0!
+bx !!
+0"
+bx "!
+0#
+bx #!
+bx $
+bx $!
+bx %
+bx %!
+0&
+bx &!
+0'
+bx '!
+0(
+bx (!
+x)
+bx )!
+x*
+bx *!
+x+
+bx +!
+x,
+bx ,!
+x-
+bx -!
+x.
+bx .!
+bx /
+bx /!
+x0
+bx 0!
+b111 1
+bx 1!
+b111 2
+bx 2!
+b111 3
+bx 3!
+x4
+bx 4!
+x5
+bx 5!
+b111 6
+bx 6!
+07
+bx 7!
+bx 8
+bx 8!
+b111 9
+bx 9!
+0:
+bx :!
+x;
+bx ;!
+x<
+bx <!
+b111 =
+bx =!
+b0 >
+bx >!
+b0 ?
+bx ?!
+x@
+bx @!
+xA
+bx A!
+b111 B
+bx B!
+0C
+bx C!
+0D
+bx D!
+b11 E
+bx E!
+bx F
+b0 F!
+bx G
+b0 G!
+bx H
+bx H!
+bx I
+b111 I!
+bx J
+0J!
+bx K
+bx K!
+bx L
+b111 L!
+bx M
+0M!
+bx N
+xN!
+bx O
+xO!
+bx P
+b111 P!
+bx Q
+0Q!
+bx R
+bx S
+bx T
+bx U
+bx V
+bx W
+bx X
+bx Y
+bx Z
+bx [
+bx \
+bx ]
+bx ^
+bx _
+bx `
+bx a
+bx b
+bx c
+bx d
+bx e
+bx f
+bx g
+bx h
+bx i
+bx j
+bx k
+bx l
+bx m
+bx n
+bx o
+bx p
+bx q
+bx r
+bx s
+bx t
+bx u
+bx v
+bx w
+bx x
+bx y
+bx z
+bx {
+bx |
+bx }
+bx ~
+$end
+
+#5000
+1!
+b0 $
+b0 %
+1&
+0)
+0*
+0+
+0,
+0-
+0.
+b0 /
+00
+04
+05
+b0 8
+0;
+0@
+0A
+b0 H!
+b0 K!
+0N!
+0O!
+
+#10000
+0!
+1"
+0&
+1'
+
+#15000
+1!
+1&
+1,
+14
+
+#20000
+0!
+0"
+0&
+0'
+
+#25000
+1!
+1&
+0,
+b11100000000 /
+10
+b110 1
+04
+b110 6
+17
+b11100000000 8
+b110 9
+1:
+1;
+
+#30000
+0!
+0&
+
+#35000
+1!
+1&
+b11000000000 /
+00
+b101 1
+b101 6
+b11000000000 8
+b101 9
+0;
+1<
+b110 =
+b1000 ?
+b11100000000 F
+bx G
+bx J
+bx K
+bx N
+bx O
+bx R
+bx S
+
+#40000
+0!
+0&
+
+#45000
+1!
+1&
+b10100000000 /
+b100 1
+b100 6
+b10100000000 8
+b100 9
+b101 =
+b1000 ?
+b11000000000 F
+bx G
+bx J
+bx K
+b11100000000 N
+bx O
+bx R
+bx S
+
+#50000
+0!
+0&
+
+#55000
+1!
+1&
+b10000000000 /
+b11 1
+b11 6
+b10000000000 8
+b11 9
+b100 =
+b1000 ?
+b10100000000 F
+bx G
+b11100000000 J
+bx K
+b11000000000 N
+bx O
+bx R
+bx S
+
+#60000
+0!
+0&
+
+#65000
+1!
+1&
+b1100000000 /
+b10 1
+b10 6
+b1100000000 8
+b10 9
+b11 =
+b1000 ?
+b10000000000 F
+bx G
+b11000000000 J
+bx K
+b10100000000 N
+bx O
+b11100000000 R
+bx S
+
+#70000
+0!
+0&
+
+#75000
+1!
+1&
+b1000000000 /
+b1 1
+b1 6
+b1000000000 8
+b1 9
+b10 =
+b1000 ?
+b1100000000 F
+b11100000000 G
+b10100000000 J
+bx K
+b10000000000 N
+bx O
+b11000000000 R
+bx S
+
+#80000
+0!
+0&
+
+#85000
+1!
+1&
+b100000000 /
+b0 1
+b0 6
+b100000000 8
+b0 9
+b1 =
+b1000 ?
+b1000000000 F
+b11000000000 G
+b101000000000 H
+b1111110000000000 I
+b10000000000 J
+bx K
+b1100000000 N
+b11100000000 O
+b10100000000 R
+bx S
+b101000000000 V
+b1111110000000000 Z
+
+#90000
+0!
+0&
+
+#95000
+1!
+1&
+1)
+b0 /
+15
+07
+b0 8
+b111 9
+0:
+b0 =
+b1000 ?
+b100000000 F
+b10100000000 G
+b100000000000 H
+b1100000000 J
+b11100000000 K
+b1000000000 N
+b11000000000 O
+b101000000000 P
+b1111110000000000 Q
+b10000000000 R
+bx S
+b100000000000 V
+b1111110000000000 \
+b1111110000000000 ^
+b101000000000 `
+b1111110000000000 d
+b1111110000000000 n
+b1111110000000000 r
+
+#100000
+0!
+0&
+
+#105000
+1!
+b1111110000000000 $!
+1&
+0)
+1-
+b1111110000000000 0!
+b111 1
+05
+b111 6
+b1111110000000000 :!
+0<
+b111 =
+b1000 ?
+1@
+b0 F
+b10000000000 G
+b11000000000 H
+b1000000000 J
+b11000000000 K
+b101000000000 L
+b1111110000000000 M
+b100000000 N
+b10100000000 O
+b100000000000 P
+b1100000000 R
+b11100000000 S
+b11000000000 V
+b101000000000 W
+b1111110000000000 [
+b100000000000 `
+b1111110000000000 f
+b1111110000000000 h
+b1111110000000000 o
+b1111110000000000 s
+b1111110000000000 z
+
+#110000
+0!
+0&
+
+#115000
+1!
+1&
+0-
+b110 2
+0@
+b110 B
+1C
+b10000000000 H
+b100000000000 L
+b11000000000 P
+b101000000000 T
+b1111110000000000 U
+b10000000000 V
+b100000000000 W
+b1000000000000 X
+b1111110000000000 Y
+b10000000000 ]
+b1111110000000000 _
+b11000000000 `
+b101000000000 a
+b1111110000000000 e
+b1000000000000 j
+b1111110000000000 l
+b10000000000 p
+b1111110000000000 t
+
+#120000
+0!
+0&
+
+#125000
+1!
+b1111100000000000 !!
+b0 "!
+b11111111111110100101100000000000 #!
+b1111110000000000 %!
+1&
+b1111100000000000 (!
+b0 )!
+b11111111111110100101100000000000 *!
+b0 +!
+b1000000000000 ,!
+b101 2
+b1111110000000000 4!
+b10000000000 >!
+b101 B
+b1111110000000000 B!
+b110000000000 X
+b1000000000000 b
+b1111110000000000 c
+b10000000000 g
+b1111110000000000 i
+b110000000000 j
+b1000000000000 k
+b1111110000000000 m
+b10000000000 q
+b1111110000000000 u
+b1000000000000 v
+b1111110000000000 x
+b10000000000 {
+b0 ~
+
+#130000
+0!
+0&
+
+#135000
+1!
+1&
+b0 &!
+b10110101000 '!
+b110000000000 ,!
+b1000000000000 -!
+b0 1!
+b100 2
+b1111110000000000 5!
+b1111110000000000 6!
+b1111110000000000 8!
+b0 ;!
+b10110101000 ?!
+b100 B
+b10110101000 C!
+b110000000000 k
+b1000000000000 w
+b1111110000000000 y
+b0 |
+b10110101000 }
+
+#140000
+0!
+0&
+
+#145000
+1!
+1&
+b1110000000000 .!
+b1111110000000000 /!
+b11 2
+b1111110000000000 2!
+b1111110000000000 3!
+b10000000000 7!
+b1111110000000000 9!
+b1111110000000000 <!
+b1111110000000000 =!
+b100110101000 @!
+b1111111001011000 A!
+b11 B
+b110101000 D!
+b1111011001011000 E!
+
+#150000
+0!
+0&
+
+#155000
+1!
+1&
+b10 2
+b10 B
+
+#160000
+0!
+0&
+
+#165000
+1!
+1&
+b1 2
+b1 B
+
+#170000
+0!
+0&
+
+#175000
+1!
+1&
+b0 2
+b0 B
+
+#180000
+0!
+0&
+
+#185000
+1!
+1&
+1*
+1A
+0C
+
+#190000
+0!
+0&
+
+#195000
+1!
+1&
+0*
+1.
+b111 2
+0A
+b111 B
+1N!
+
+#200000
+0!
+0&
+
+#205000
+1!
+b1110000000000 $
+1&
+0.
+b110 3
+b1110000000000 H!
+b110 I!
+1J!
+b110 L!
+1M!
+0N!
+b110 P!
+1Q!
+
+#210000
+0!
+0&
+
+#215000
+1!
+b1111110000000000 $
+b100110101000 %
+1&
+b101 3
+b1111110000000000 H!
+b101 I!
+b100110101000 K!
+b101 L!
+b101 P!
+
+#220000
+0!
+0&
+
+#225000
+1!
+b10000000000 %
+1&
+b100 3
+b100 I!
+b10000000000 K!
+b100 L!
+b100 P!
+
+#230000
+0!
+0&
+
+#235000
+1!
+b110101000 %
+1&
+b11 3
+b11 I!
+b110101000 K!
+b11 L!
+b11 P!
+
+#240000
+0!
+0&
+
+#245000
+1!
+b0 %
+1&
+b10 3
+b10 I!
+b0 K!
+b10 L!
+b10 P!
+
+#250000
+0!
+0&
+
+#255000
+1!
+b1111111001011000 %
+1&
+b1 3
+b1 I!
+b1111111001011000 K!
+b1 L!
+b1 P!
+
+#260000
+0!
+0&
+
+#265000
+1!
+b1111110000000000 %
+1&
+b0 3
+b0 I!
+b1111110000000000 K!
+b0 L!
+b0 P!
+
+#270000
+0!
+0&
+
+#275000
+1!
+b1111011001011000 %
+1&
+1+
+b111 I!
+0J!
+b1111011001011000 K!
+b111 L!
+0M!
+1O!
+0Q!
+
+#280000
+0!
+0&
+
+#285000
+1!
+b0 $
+b0 %
+1&
+0+
+b111 3
+b0 H!
+b0 K!
+0O!
+b111 P!
+
+#290000
+0!
+0&
+
+#295000
+1!
+1&
+
+#300000
+0!
+0&
+
+#305000
+1!
+1&
+
+#310000
+0!
+0&
+
+#315000
+1!
+1&
+
+#320000
+0!
+0&
+
+#325000
+1!
+1&
+
+#330000
+0!
+0&
+
+#335000
+1!
+1&
+
+#340000
+0!
+0&
+
+#345000
+1!
+1&
+
+#350000
+0!
+0&
+
+#355000
+1!
+1&
+
+#360000
+0!
+0&
+
+#365000
+1!
+1&
+
+#370000
+0!
+0&
+
+#375000
+1!
+1&
+
+#380000
+0!
+0&
+
+#385000
+1!
+1&
+
+#390000
+0!
+0&
+
+#395000
+1!
+1&
