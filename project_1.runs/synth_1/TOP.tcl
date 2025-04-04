@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "/home/sj/Documents/study/asic/project_1/project_1.runs/synth_1/tb.tcl"
+  variable script "/home/sj/Documents/study/asic/project_1/project_1.runs/synth_1/TOP.tcl"
   variable category "vivado_synth"
 }
 
@@ -57,7 +57,8 @@ if {$::dispatch::connected} {
 
 OPTRACE "synth_1" START { ROLLUP_AUTO }
 set_param checkpoint.writeSynthRtdsInDcp 1
-set_param synth.incrementalSynthesisCache ./.Xil/Vivado-45652-sj-Inspiron-13-5310/incrSyn
+set_param chipscope.maxJobs 2
+set_param synth.incrementalSynthesisCache ./.Xil/Vivado-20117-sj-Inspiron-13-5310/incrSyn
 set_msg_config -id {Synth 8-256} -limit 10000
 set_msg_config -id {Synth 8-638} -limit 10000
 OPTRACE "Creating in-memory project" START { }
@@ -85,10 +86,12 @@ foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
 set_param ips.enableIPCacheLiteLoad 1
+
+read_checkpoint -auto_incremental -incremental /home/sj/Documents/study/asic/project_1/project_1.srcs/utils_1/imports/synth_1/tb.dcp
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }
-synth_design -top tb -part xc7k70tfbv676-1
+synth_design -top TOP -part xc7k70tfbv676-1
 OPTRACE "synth_design" END { }
 if { [get_msg_config -count -severity {CRITICAL WARNING}] > 0 } {
  send_msg_id runtcl-6 info "Synthesis results are not added to the cache due to CRITICAL_WARNING"
@@ -98,10 +101,10 @@ if { [get_msg_config -count -severity {CRITICAL WARNING}] > 0 } {
 OPTRACE "write_checkpoint" START { CHECKPOINT }
 # disable binary constraint mode for synth run checkpoints
 set_param constraints.enableBinaryConstraints false
-write_checkpoint -force -noxdef tb.dcp
+write_checkpoint -force -noxdef TOP.dcp
 OPTRACE "write_checkpoint" END { }
 OPTRACE "synth reports" START { REPORT }
-generate_parallel_reports -reports { "report_utilization -file tb_utilization_synth.rpt -pb tb_utilization_synth.pb"  } 
+generate_parallel_reports -reports { "report_utilization -file TOP_utilization_synth.rpt -pb TOP_utilization_synth.pb"  } 
 OPTRACE "synth reports" END { }
 file delete __synthesis_is_running__
 close [open __synthesis_is_complete__ w]

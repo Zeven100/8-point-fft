@@ -1,0 +1,659 @@
+#-----------------------------------------------------------
+# Vivado v2024.2 (64-bit)
+# SW Build 5239630 on Fri Nov 08 22:34:34 MST 2024
+# IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+# SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+# Start of session at: Fri Apr  4 15:03:34 2025
+# Process ID         : 50789
+# Current directory  : /home/sj/Documents/study/asic/project_1
+# Command line       : vivado
+# Log file           : /home/sj/Documents/study/asic/project_1/vivado.log
+# Journal file       : /home/sj/Documents/study/asic/project_1/vivado.jou
+# Running On         : sj-Inspiron-13-5310
+# Platform           : Ubuntu
+# Operating System   : Ubuntu 24.04.2 LTS
+# Processor Detail   : 11th Gen Intel(R) Core(TM) i5-11320H @ 3.20GHz
+# CPU Frequency      : 2694.830 MHz
+# CPU Physical cores : 4
+# CPU Logical cores  : 8
+# Host memory        : 16500 MB
+# Swap memory        : 4294 MB
+# Total Virtual      : 20795 MB
+# Available Virtual  : 17221 MB
+#-----------------------------------------------------------
+start_gui
+open_project /home/sj/Documents/study/asic/project_1/project_1.xpr
+INFO: [filemgmt 56-3] Default IP Output Path : Could not find the directory '/home/sj/Documents/study/asic/project_1/project_1.gen/sources_1'.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2024.2/data/ip'.
+update_compile_order -fileset sources_1
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'tb'
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/sj/Documents/study/asic/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from '/tools/Xilinx/Vivado/2024.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported '/home/sj/Documents/study/asic/project_1/project_1.sim/sim_1/behav/xsim/mem_init.mem'
+INFO: [SIM-utils-43] Exported '/home/sj/Documents/study/asic/project_1/project_1.sim/sim_1/behav/xsim/mem_init2.mem'
+INFO: [SIM-utils-43] Exported '/home/sj/Documents/study/asic/project_1/project_1.sim/sim_1/behav/xsim/mem_init.mem'
+INFO: [SIM-utils-43] Exported '/home/sj/Documents/study/asic/project_1/project_1.sim/sim_1/behav/xsim/mem_init2.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/sj/Documents/study/asic/project_1/project_1.sim/sim_1/behav/xsim'
+xvlog --incr --relax -L uvm -L UVM -prj tb_vlog.prj
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sj/Documents/study/asic/project_1/project_1.srcs/sources_1/new/top.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module TOP
+INFO: [VRFC 10-311] analyzing module PG
+INFO: [VRFC 10-311] analyzing module Loadable_Counter
+INFO: [VRFC 10-311] analyzing module BROM
+INFO: [VRFC 10-311] analyzing module ROM
+INFO: [VRFC 10-311] analyzing module S2P
+INFO: [VRFC 10-311] analyzing module BF1
+INFO: [VRFC 10-311] analyzing module BF2
+INFO: [VRFC 10-311] analyzing module CMX1
+INFO: [VRFC 10-311] analyzing module CMX2
+INFO: [VRFC 10-311] analyzing module delay
+INFO: [VRFC 10-311] analyzing module fft_processor
+INFO: [VRFC 10-311] analyzing module P2S
+INFO: [VRFC 10-311] analyzing module tb
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/sj/Documents/study/asic/project_1/project_1.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator v2024.2.0
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2024.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 35 differs from formal bit length 4 for port 'read_address' [/home/sj/Documents/study/asic/project_1/project_1.srcs/sources_1/new/top.sv:114]
+WARNING: [VRFC 10-8864] concatenation with an unsized literal will be treated as 32 bits [/home/sj/Documents/study/asic/project_1/project_1.srcs/sources_1/new/top.sv:114]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.PG
+Compiling module xil_defaultlib.Loadable_Counter
+Compiling module xil_defaultlib.BRAM
+Compiling module xil_defaultlib.ROM
+Compiling module xil_defaultlib.S2P
+Compiling module xil_defaultlib.BF1
+Compiling module xil_defaultlib.BF2
+Compiling module xil_defaultlib.delay
+Compiling module xil_defaultlib.CMX1
+Compiling module xil_defaultlib.CMX2
+Compiling module xil_defaultlib.fft_processor
+Compiling module xil_defaultlib.P2S
+Compiling module xil_defaultlib.TOP
+Compiling module xil_defaultlib.tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/sj/Documents/study/asic/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_behav -key {Behavioral:sim_1:Functional:tb} -tclbatch {tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+$finish called at time : 400 ns : File "/home/sj/Documents/study/asic/project_1/project_1.srcs/sources_1/new/top.sv" Line 333
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:12 ; elapsed = 00:00:09 . Memory (MB): peak = 7852.723 ; gain = 69.266 ; free physical = 5798 ; free virtual = 15717
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'tb'
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/sj/Documents/study/asic/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from '/tools/Xilinx/Vivado/2024.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported '/home/sj/Documents/study/asic/project_1/project_1.sim/sim_1/behav/xsim/mem_init.mem'
+INFO: [SIM-utils-43] Exported '/home/sj/Documents/study/asic/project_1/project_1.sim/sim_1/behav/xsim/mem_init2.mem'
+INFO: [SIM-utils-43] Exported '/home/sj/Documents/study/asic/project_1/project_1.sim/sim_1/behav/xsim/mem_init.mem'
+INFO: [SIM-utils-43] Exported '/home/sj/Documents/study/asic/project_1/project_1.sim/sim_1/behav/xsim/mem_init2.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/sj/Documents/study/asic/project_1/project_1.sim/sim_1/behav/xsim'
+xvlog --incr --relax -L uvm -L UVM -prj tb_vlog.prj
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sj/Documents/study/asic/project_1/project_1.srcs/sources_1/new/top.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module TOP
+INFO: [VRFC 10-311] analyzing module PG
+INFO: [VRFC 10-311] analyzing module Loadable_Counter
+INFO: [VRFC 10-311] analyzing module BROM
+INFO: [VRFC 10-311] analyzing module ROM
+INFO: [VRFC 10-311] analyzing module S2P
+INFO: [VRFC 10-311] analyzing module BF1
+INFO: [VRFC 10-311] analyzing module BF2
+INFO: [VRFC 10-311] analyzing module CMX1
+INFO: [VRFC 10-311] analyzing module CMX2
+INFO: [VRFC 10-311] analyzing module delay
+INFO: [VRFC 10-311] analyzing module fft_processor
+INFO: [VRFC 10-311] analyzing module P2S
+INFO: [VRFC 10-311] analyzing module tb
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/sj/Documents/study/asic/project_1/project_1.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator v2024.2.0
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2024.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 35 differs from formal bit length 4 for port 'read_address' [/home/sj/Documents/study/asic/project_1/project_1.srcs/sources_1/new/top.sv:114]
+WARNING: [VRFC 10-8864] concatenation with an unsized literal will be treated as 32 bits [/home/sj/Documents/study/asic/project_1/project_1.srcs/sources_1/new/top.sv:114]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.PG
+Compiling module xil_defaultlib.Loadable_Counter
+Compiling module xil_defaultlib.BRAM
+Compiling module xil_defaultlib.ROM
+Compiling module xil_defaultlib.S2P
+Compiling module xil_defaultlib.BF1
+Compiling module xil_defaultlib.BF2
+Compiling module xil_defaultlib.delay
+Compiling module xil_defaultlib.CMX1
+Compiling module xil_defaultlib.CMX2
+Compiling module xil_defaultlib.fft_processor
+Compiling module xil_defaultlib.P2S
+Compiling module xil_defaultlib.TOP
+Compiling module xil_defaultlib.tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/sj/Documents/study/asic/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_behav -key {Behavioral:sim_1:Functional:tb} -tclbatch {tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+$finish called at time : 400 ns : File "/home/sj/Documents/study/asic/project_1/project_1.srcs/sources_1/new/top.sv" Line 333
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:09 ; elapsed = 00:00:08 . Memory (MB): peak = 7869.727 ; gain = 17.004 ; free physical = 5787 ; free virtual = 15717
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+export_ip_user_files -of_objects  [get_files /home/sj/Documents/study/asic/project_1/project_1.srcs/sim_1/new/mem_init.mem] -no_script -reset -force -quiet
+remove_files  -fileset sim_1 /home/sj/Documents/study/asic/project_1/project_1.srcs/sim_1/new/mem_init.mem
+file delete -force /home/sj/Documents/study/asic/project_1/project_1.srcs/sim_1/new/mem_init.mem
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'tb'
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/sj/Documents/study/asic/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from '/tools/Xilinx/Vivado/2024.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported '/home/sj/Documents/study/asic/project_1/project_1.sim/sim_1/behav/xsim/mem_init2.mem'
+INFO: [SIM-utils-43] Exported '/home/sj/Documents/study/asic/project_1/project_1.sim/sim_1/behav/xsim/mem_init2.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/sj/Documents/study/asic/project_1/project_1.sim/sim_1/behav/xsim'
+xvlog --incr --relax -L uvm -L UVM -prj tb_vlog.prj
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sj/Documents/study/asic/project_1/project_1.srcs/sources_1/new/top.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module TOP
+INFO: [VRFC 10-311] analyzing module PG
+INFO: [VRFC 10-311] analyzing module Loadable_Counter
+INFO: [VRFC 10-311] analyzing module BROM
+INFO: [VRFC 10-311] analyzing module ROM
+INFO: [VRFC 10-311] analyzing module S2P
+INFO: [VRFC 10-311] analyzing module BF1
+INFO: [VRFC 10-311] analyzing module BF2
+INFO: [VRFC 10-311] analyzing module CMX1
+INFO: [VRFC 10-311] analyzing module CMX2
+INFO: [VRFC 10-311] analyzing module delay
+INFO: [VRFC 10-311] analyzing module fft_processor
+INFO: [VRFC 10-311] analyzing module P2S
+INFO: [VRFC 10-311] analyzing module tb
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/sj/Documents/study/asic/project_1/project_1.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator v2024.2.0
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2024.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 35 differs from formal bit length 4 for port 'read_address' [/home/sj/Documents/study/asic/project_1/project_1.srcs/sources_1/new/top.sv:114]
+WARNING: [VRFC 10-8864] concatenation with an unsized literal will be treated as 32 bits [/home/sj/Documents/study/asic/project_1/project_1.srcs/sources_1/new/top.sv:114]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.PG
+Compiling module xil_defaultlib.Loadable_Counter
+Compiling module xil_defaultlib.BRAM
+Compiling module xil_defaultlib.ROM
+Compiling module xil_defaultlib.S2P
+Compiling module xil_defaultlib.BF1
+Compiling module xil_defaultlib.BF2
+Compiling module xil_defaultlib.delay
+Compiling module xil_defaultlib.CMX1
+Compiling module xil_defaultlib.CMX2
+Compiling module xil_defaultlib.fft_processor
+Compiling module xil_defaultlib.P2S
+Compiling module xil_defaultlib.TOP
+Compiling module xil_defaultlib.tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/sj/Documents/study/asic/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_behav -key {Behavioral:sim_1:Functional:tb} -tclbatch {tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+$finish called at time : 400 ns : File "/home/sj/Documents/study/asic/project_1/project_1.srcs/sources_1/new/top.sv" Line 333
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 7898.598 ; gain = 28.871 ; free physical = 5790 ; free virtual = 15719
+export_ip_user_files -of_objects  [get_files /home/sj/Documents/study/asic/project_1/project_1.srcs/sim_1/new/mem_init2.mem] -no_script -reset -force -quiet
+remove_files  -fileset sim_1 /home/sj/Documents/study/asic/project_1/project_1.srcs/sim_1/new/mem_init2.mem
+file delete -force /home/sj/Documents/study/asic/project_1/project_1.srcs/sim_1/new/mem_init2.mem
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'tb'
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/sj/Documents/study/asic/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from '/tools/Xilinx/Vivado/2024.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/sj/Documents/study/asic/project_1/project_1.sim/sim_1/behav/xsim'
+xvlog --incr --relax -L uvm -L UVM -prj tb_vlog.prj
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sj/Documents/study/asic/project_1/project_1.srcs/sources_1/new/top.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module TOP
+INFO: [VRFC 10-311] analyzing module PG
+INFO: [VRFC 10-311] analyzing module Loadable_Counter
+INFO: [VRFC 10-311] analyzing module BROM
+INFO: [VRFC 10-311] analyzing module ROM
+INFO: [VRFC 10-311] analyzing module S2P
+INFO: [VRFC 10-311] analyzing module BF1
+INFO: [VRFC 10-311] analyzing module BF2
+INFO: [VRFC 10-311] analyzing module CMX1
+INFO: [VRFC 10-311] analyzing module CMX2
+INFO: [VRFC 10-311] analyzing module delay
+INFO: [VRFC 10-311] analyzing module fft_processor
+INFO: [VRFC 10-311] analyzing module P2S
+INFO: [VRFC 10-311] analyzing module tb
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/sj/Documents/study/asic/project_1/project_1.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator v2024.2.0
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2024.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 35 differs from formal bit length 4 for port 'read_address' [/home/sj/Documents/study/asic/project_1/project_1.srcs/sources_1/new/top.sv:114]
+WARNING: [VRFC 10-8864] concatenation with an unsized literal will be treated as 32 bits [/home/sj/Documents/study/asic/project_1/project_1.srcs/sources_1/new/top.sv:114]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.PG
+Compiling module xil_defaultlib.Loadable_Counter
+Compiling module xil_defaultlib.BRAM
+Compiling module xil_defaultlib.ROM
+Compiling module xil_defaultlib.S2P
+Compiling module xil_defaultlib.BF1
+Compiling module xil_defaultlib.BF2
+Compiling module xil_defaultlib.delay
+Compiling module xil_defaultlib.CMX1
+Compiling module xil_defaultlib.CMX2
+Compiling module xil_defaultlib.fft_processor
+Compiling module xil_defaultlib.P2S
+Compiling module xil_defaultlib.TOP
+Compiling module xil_defaultlib.tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/sj/Documents/study/asic/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_behav -key {Behavioral:sim_1:Functional:tb} -tclbatch {tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+$finish called at time : 400 ns : File "/home/sj/Documents/study/asic/project_1/project_1.srcs/sources_1/new/top.sv" Line 333
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 7927.598 ; gain = 0.000 ; free physical = 5926 ; free virtual = 15708
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'tb'
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/sj/Documents/study/asic/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from '/tools/Xilinx/Vivado/2024.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/sj/Documents/study/asic/project_1/project_1.sim/sim_1/behav/xsim'
+xvlog --incr --relax -L uvm -L UVM -prj tb_vlog.prj
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sj/Documents/study/asic/project_1/project_1.srcs/sources_1/new/top.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module TOP
+INFO: [VRFC 10-311] analyzing module PG
+INFO: [VRFC 10-311] analyzing module Loadable_Counter
+INFO: [VRFC 10-311] analyzing module BROM
+INFO: [VRFC 10-311] analyzing module ROM
+INFO: [VRFC 10-311] analyzing module S2P
+INFO: [VRFC 10-311] analyzing module BF1
+INFO: [VRFC 10-311] analyzing module BF2
+INFO: [VRFC 10-311] analyzing module CMX1
+INFO: [VRFC 10-311] analyzing module CMX2
+INFO: [VRFC 10-311] analyzing module delay
+INFO: [VRFC 10-311] analyzing module fft_processor
+INFO: [VRFC 10-311] analyzing module P2S
+INFO: [VRFC 10-311] analyzing module tb
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/sj/Documents/study/asic/project_1/project_1.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator v2024.2.0
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2024.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 35 differs from formal bit length 4 for port 'read_address' [/home/sj/Documents/study/asic/project_1/project_1.srcs/sources_1/new/top.sv:111]
+WARNING: [VRFC 10-8864] concatenation with an unsized literal will be treated as 32 bits [/home/sj/Documents/study/asic/project_1/project_1.srcs/sources_1/new/top.sv:111]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.PG
+Compiling module xil_defaultlib.Loadable_Counter
+Compiling module xil_defaultlib.BRAM
+Compiling module xil_defaultlib.ROM
+Compiling module xil_defaultlib.S2P
+Compiling module xil_defaultlib.BF1
+Compiling module xil_defaultlib.BF2
+Compiling module xil_defaultlib.delay
+Compiling module xil_defaultlib.CMX1
+Compiling module xil_defaultlib.CMX2
+Compiling module xil_defaultlib.fft_processor
+Compiling module xil_defaultlib.P2S
+Compiling module xil_defaultlib.TOP
+Compiling module xil_defaultlib.tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/sj/Documents/study/asic/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_behav -key {Behavioral:sim_1:Functional:tb} -tclbatch {tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+$finish called at time : 200 ns : File "/home/sj/Documents/study/asic/project_1/project_1.srcs/sources_1/new/top.sv" Line 330
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 7941.609 ; gain = 14.012 ; free physical = 5934 ; free virtual = 15699
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open /home/sj/Documents/study/asic/project_1/project_1.srcs/sim_1/new/mem_init.mem w ]
+add_files -fileset sim_1 /home/sj/Documents/study/asic/project_1/project_1.srcs/sim_1/new/mem_init.mem
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'tb'
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/sj/Documents/study/asic/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from '/tools/Xilinx/Vivado/2024.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported '/home/sj/Documents/study/asic/project_1/project_1.sim/sim_1/behav/xsim/mem_init.mem'
+INFO: [SIM-utils-43] Exported '/home/sj/Documents/study/asic/project_1/project_1.sim/sim_1/behav/xsim/mem_init.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/sj/Documents/study/asic/project_1/project_1.sim/sim_1/behav/xsim'
+xvlog --incr --relax -L uvm -L UVM -prj tb_vlog.prj
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sj/Documents/study/asic/project_1/project_1.srcs/sources_1/new/top.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module TOP
+INFO: [VRFC 10-311] analyzing module PG
+INFO: [VRFC 10-311] analyzing module Loadable_Counter
+INFO: [VRFC 10-311] analyzing module BROM
+INFO: [VRFC 10-311] analyzing module ROM
+INFO: [VRFC 10-311] analyzing module S2P
+INFO: [VRFC 10-311] analyzing module BF1
+INFO: [VRFC 10-311] analyzing module BF2
+INFO: [VRFC 10-311] analyzing module CMX1
+INFO: [VRFC 10-311] analyzing module CMX2
+INFO: [VRFC 10-311] analyzing module delay
+INFO: [VRFC 10-311] analyzing module fft_processor
+INFO: [VRFC 10-311] analyzing module P2S
+INFO: [VRFC 10-311] analyzing module tb
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/sj/Documents/study/asic/project_1/project_1.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator v2024.2.0
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2024.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 35 differs from formal bit length 4 for port 'read_address' [/home/sj/Documents/study/asic/project_1/project_1.srcs/sources_1/new/top.sv:111]
+WARNING: [VRFC 10-8864] concatenation with an unsized literal will be treated as 32 bits [/home/sj/Documents/study/asic/project_1/project_1.srcs/sources_1/new/top.sv:111]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.PG
+Compiling module xil_defaultlib.Loadable_Counter
+Compiling module xil_defaultlib.BRAM
+Compiling module xil_defaultlib.ROM
+Compiling module xil_defaultlib.S2P
+Compiling module xil_defaultlib.BF1
+Compiling module xil_defaultlib.BF2
+Compiling module xil_defaultlib.delay
+Compiling module xil_defaultlib.CMX1
+Compiling module xil_defaultlib.CMX2
+Compiling module xil_defaultlib.fft_processor
+Compiling module xil_defaultlib.P2S
+Compiling module xil_defaultlib.TOP
+Compiling module xil_defaultlib.tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/sj/Documents/study/asic/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_behav -key {Behavioral:sim_1:Functional:tb} -tclbatch {tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+$finish called at time : 200 ns : File "/home/sj/Documents/study/asic/project_1/project_1.srcs/sources_1/new/top.sv" Line 330
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 8009.621 ; gain = 66.789 ; free physical = 5913 ; free virtual = 15696
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'tb'
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/sj/Documents/study/asic/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from '/tools/Xilinx/Vivado/2024.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported '/home/sj/Documents/study/asic/project_1/project_1.sim/sim_1/behav/xsim/mem_init.mem'
+INFO: [SIM-utils-43] Exported '/home/sj/Documents/study/asic/project_1/project_1.sim/sim_1/behav/xsim/mem_init.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/sj/Documents/study/asic/project_1/project_1.sim/sim_1/behav/xsim'
+xvlog --incr --relax -L uvm -L UVM -prj tb_vlog.prj
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sj/Documents/study/asic/project_1/project_1.srcs/sources_1/new/top.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module TOP
+INFO: [VRFC 10-311] analyzing module PG
+INFO: [VRFC 10-311] analyzing module Loadable_Counter
+INFO: [VRFC 10-311] analyzing module BROM
+INFO: [VRFC 10-311] analyzing module ROM
+INFO: [VRFC 10-311] analyzing module S2P
+INFO: [VRFC 10-311] analyzing module BF1
+INFO: [VRFC 10-311] analyzing module BF2
+INFO: [VRFC 10-311] analyzing module CMX1
+INFO: [VRFC 10-311] analyzing module CMX2
+INFO: [VRFC 10-311] analyzing module delay
+INFO: [VRFC 10-311] analyzing module fft_processor
+INFO: [VRFC 10-311] analyzing module P2S
+INFO: [VRFC 10-311] analyzing module tb
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/sj/Documents/study/asic/project_1/project_1.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator v2024.2.0
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2024.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 35 differs from formal bit length 4 for port 'read_address' [/home/sj/Documents/study/asic/project_1/project_1.srcs/sources_1/new/top.sv:111]
+WARNING: [VRFC 10-8864] concatenation with an unsized literal will be treated as 32 bits [/home/sj/Documents/study/asic/project_1/project_1.srcs/sources_1/new/top.sv:111]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.PG
+Compiling module xil_defaultlib.Loadable_Counter
+Compiling module xil_defaultlib.BRAM
+Compiling module xil_defaultlib.ROM
+Compiling module xil_defaultlib.S2P
+Compiling module xil_defaultlib.BF1
+Compiling module xil_defaultlib.BF2
+Compiling module xil_defaultlib.delay
+Compiling module xil_defaultlib.CMX1
+Compiling module xil_defaultlib.CMX2
+Compiling module xil_defaultlib.fft_processor
+Compiling module xil_defaultlib.P2S
+Compiling module xil_defaultlib.TOP
+Compiling module xil_defaultlib.tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/sj/Documents/study/asic/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_behav -key {Behavioral:sim_1:Functional:tb} -tclbatch {tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+$finish called at time : 300 ns : File "/home/sj/Documents/study/asic/project_1/project_1.srcs/sources_1/new/top.sv" Line 330
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 8026.625 ; gain = 17.004 ; free physical = 5900 ; free virtual = 15680
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Fri Apr  4 15:16:51 2025...

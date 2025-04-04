@@ -1,0 +1,56 @@
+#-----------------------------------------------------------
+# Vivado v2024.2 (64-bit)
+# SW Build 5239630 on Fri Nov 08 22:34:34 MST 2024
+# IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+# SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+# Start of session at: Fri Apr  4 15:03:34 2025
+# Process ID         : 50789
+# Current directory  : /home/sj/Documents/study/asic/project_1
+# Command line       : vivado
+# Log file           : /home/sj/Documents/study/asic/project_1/vivado.log
+# Journal file       : /home/sj/Documents/study/asic/project_1/vivado.jou
+# Running On         : sj-Inspiron-13-5310
+# Platform           : Ubuntu
+# Operating System   : Ubuntu 24.04.2 LTS
+# Processor Detail   : 11th Gen Intel(R) Core(TM) i5-11320H @ 3.20GHz
+# CPU Frequency      : 2694.830 MHz
+# CPU Physical cores : 4
+# CPU Logical cores  : 8
+# Host memory        : 16500 MB
+# Swap memory        : 4294 MB
+# Total Virtual      : 20795 MB
+# Available Virtual  : 17221 MB
+#-----------------------------------------------------------
+start_gui
+open_project /home/sj/Documents/study/asic/project_1/project_1.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+source tb.tcl
+close_sim
+launch_simulation
+source tb.tcl
+close_sim
+export_ip_user_files -of_objects  [get_files /home/sj/Documents/study/asic/project_1/project_1.srcs/sim_1/new/mem_init.mem] -no_script -reset -force -quiet
+remove_files  -fileset sim_1 /home/sj/Documents/study/asic/project_1/project_1.srcs/sim_1/new/mem_init.mem
+file delete -force /home/sj/Documents/study/asic/project_1/project_1.srcs/sim_1/new/mem_init.mem
+launch_simulation
+source tb.tcl
+export_ip_user_files -of_objects  [get_files /home/sj/Documents/study/asic/project_1/project_1.srcs/sim_1/new/mem_init2.mem] -no_script -reset -force -quiet
+remove_files  -fileset sim_1 /home/sj/Documents/study/asic/project_1/project_1.srcs/sim_1/new/mem_init2.mem
+file delete -force /home/sj/Documents/study/asic/project_1/project_1.srcs/sim_1/new/mem_init2.mem
+close_sim
+launch_simulation
+source tb.tcl
+close_sim
+launch_simulation
+source tb.tcl
+close_sim
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open /home/sj/Documents/study/asic/project_1/project_1.srcs/sim_1/new/mem_init.mem w ]
+add_files -fileset sim_1 /home/sj/Documents/study/asic/project_1/project_1.srcs/sim_1/new/mem_init.mem
+launch_simulation
+source tb.tcl
+close_sim
+launch_simulation
+source tb.tcl
+close_sim
