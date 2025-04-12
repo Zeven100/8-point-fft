@@ -35,41 +35,41 @@
   <File Type="BG-BIT" Name="TOP.bit"/>
   <File Type="PDI-FILE" Name="TOP.pdi"/>
   <File Type="RDI-RDI" Name="TOP.vdi"/>
-  <File Type="ROUTE-TIMINGSUMMARY" Name="TOP_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="tb_timing_summary_routed.rpt"/>
   <File Type="BG-BIN" Name="TOP.bin"/>
-  <File Type="PLACE-IO" Name="TOP_io_placed.rpt"/>
-  <File Type="OPT-DRC" Name="TOP_drc_opted.rpt"/>
-  <File Type="PLACE-CTRL" Name="TOP_control_sets_placed.rpt"/>
-  <File Type="ROUTE-METHODOLOGY-DRC" Name="TOP_methodology_drc_routed.rpt"/>
-  <File Type="PLACE-UTIL-PB" Name="TOP_utilization_placed.pb"/>
-  <File Type="ROUTE-TIMING-RPX" Name="TOP_timing_summary_routed.rpx"/>
+  <File Type="PLACE-IO" Name="tb_io_placed.rpt"/>
+  <File Type="OPT-DRC" Name="tb_drc_opted.rpt"/>
+  <File Type="PLACE-CTRL" Name="tb_control_sets_placed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="tb_methodology_drc_routed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="tb_utilization_placed.pb"/>
+  <File Type="ROUTE-TIMING-RPX" Name="tb_timing_summary_routed.rpx"/>
   <File Type="REPORTS-TCL" Name="TOP_reports.tcl"/>
   <File Type="PA-TCL" Name="TOP.tcl"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="TOP_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="tb_methodology_drc_routed.pb"/>
   <File Type="BG-BGN" Name="TOP.bgn"/>
-  <File Type="PLACE-UTIL" Name="TOP_utilization_placed.rpt"/>
-  <File Type="ROUTE-STATUS" Name="TOP_route_status.rpt"/>
-  <File Type="ROUTE-STATUS-PB" Name="TOP_route_status.pb"/>
+  <File Type="PLACE-UTIL" Name="tb_utilization_placed.rpt"/>
+  <File Type="ROUTE-STATUS" Name="tb_route_status.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="tb_route_status.pb"/>
   <File Type="BG-DRC" Name="TOP.drc"/>
-  <File Type="ROUTE-PWR" Name="TOP_power_routed.rpt"/>
-  <File Type="ROUTE-PWR-RPX" Name="TOP_power_routed.rpx"/>
-  <File Type="ROUTE-PWR-SUM" Name="TOP_power_summary_routed.pb"/>
-  <File Type="ROUTE-DRC" Name="TOP_drc_routed.rpt"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="TOP_methodology_drc_routed.rpx"/>
-  <File Type="ROUTE-DRC-RPX" Name="TOP_drc_routed.rpx"/>
-  <File Type="ROUTE-DRC-PB" Name="TOP_drc_routed.pb"/>
-  <File Type="ROUTE-SIMILARITY" Name="TOP_incremental_reuse_routed.rpt"/>
-  <File Type="ROUTE-CLK" Name="TOP_clock_utilization_routed.rpt"/>
-  <File Type="ROUTE-BUS-SKEW" Name="TOP_bus_skew_routed.rpt"/>
-  <File Type="ROUTE-BUS-SKEW-RPX" Name="TOP_bus_skew_routed.rpx"/>
-  <File Type="ROUTE-BUS-SKEW-PB" Name="TOP_bus_skew_routed.pb"/>
+  <File Type="ROUTE-PWR" Name="tb_power_routed.rpt"/>
+  <File Type="ROUTE-PWR-RPX" Name="tb_power_routed.rpx"/>
+  <File Type="ROUTE-PWR-SUM" Name="tb_power_summary_routed.pb"/>
+  <File Type="ROUTE-DRC" Name="tb_drc_routed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="tb_methodology_drc_routed.rpx"/>
+  <File Type="ROUTE-DRC-RPX" Name="tb_drc_routed.rpx"/>
+  <File Type="ROUTE-DRC-PB" Name="tb_drc_routed.pb"/>
+  <File Type="ROUTE-SIMILARITY" Name="tb_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-CLK" Name="tb_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW" Name="tb_bus_skew_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="tb_bus_skew_routed.rpx"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="tb_bus_skew_routed.pb"/>
   <File Type="BITSTR-MSK" Name="TOP.msk"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="TOP_timing_summary_postroute_physopted.rpt"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="TOP_timing_summary_postroute_physopted.rpx"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="TOP_timing_summary_postroute_physopted.pb"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="TOP_bus_skew_postroute_physopted.rpt"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="TOP_bus_skew_postroute_physopted.rpx"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="TOP_bus_skew_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="tb_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="tb_timing_summary_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="tb_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="tb_bus_skew_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="tb_bus_skew_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="tb_bus_skew_postroute_physopted.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/new/top.sv">

@@ -124,8 +124,33 @@ module BRAM (
     reg [15:0] bram [0:15];
 
     // Initialize memory from file
-    initial $readmemh("mem_init0.mem", bram);
-
+//    initial $readmemh("mem_init0.mem", bram);
+    // hard coding initial values for simulation 
+    
+    // Test - 1
+    initial begin 
+        bram[0] = 16'h0000 ; 
+        bram[1] = 16'h0100 ; 
+        bram[2] = 16'h0200 ; 
+        bram[3] = 16'h0300 ; 
+        bram[4] = 16'h0400 ; 
+        bram[5] = 16'h0500 ; 
+        bram[6] = 16'h0600 ; 
+        bram[7] = 16'h0700 ;        
+    end
+   
+    
+//    // Test - 2
+//    initial begin 
+//        bram[0] = 16'h0000 ; 
+//        bram[1] = 16'h03A6 ; 
+//        bram[2] = 16'hF9A6 ; 
+//        bram[3] = 16'h07CB ; 
+//        bram[4] = 16'h01C2 ; 
+//        bram[5] = 16'hFCA3 ; 
+//        bram[6] = 16'h0642 ; 
+//        bram[7] = 16'hFFD3 ;        
+//    end
     integer i;
 
     always @(posedge clk) begin
